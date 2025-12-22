@@ -1,0 +1,10 @@
+[project]
+name = "iitr-ics"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "arrow>=1.4.0",
+    "ics>=0.7.2",
+]
