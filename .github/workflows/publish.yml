@@ -15,9 +15,6 @@ jobs:
       - name: Install the project
         run: uv sync --locked --all-extras --dev
 
-      - name: Create ICS Directory
-        run: mkdir ics
-
       - name: Generate ICS files from JSON
         run: uv run main.py
 
