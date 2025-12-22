@@ -2,6 +2,7 @@ name: Publish ICS Files
 on:
     push:
        branches: [main]
+
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -16,9 +17,6 @@ jobs:
         run: uv sync --locked --all-extras --dev
 
       - name: Generate ICS files from JSON
-        run: uv run main.py
-
-      - name: Upload ICS Artifacts
         run: uv run main.py
 
       - name: Upload static ICS files as artifact
