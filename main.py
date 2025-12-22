@@ -10,6 +10,9 @@ if __name__ == "__main__":
 		exit(101)
 
 	for i in os.listdir(RESPONSE_JSON_DIR):
+		if not i.endswith(".json"):
+			continue
+
 		print("PARSING", i)
 		with open(f"{RESPONSE_JSON_DIR}/{i}", "r") as rsp:
 			mp = json.load(rsp)
