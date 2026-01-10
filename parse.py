@@ -31,8 +31,9 @@ class ICSCalendar:
 			start_t = parse_to_arrow(start_t_str, day_code)
 			end_t = parse_to_arrow(end_t_str, day_code)
 
-            # recur for next 6 months
-			until_date = start_t.shift(months=6).replace(hour=23, minute=59, second=59)
+			until_date = start_t.shift(months=6)
+			until_utc = until_date.to('UTC').format('YYYYMMDDTHHmmss') + "Z"
+			rrule_value = f"FREQ=WEEKLY;BYDAY={day_code};UNTIL={until_utc}"
 
 			e = Event()
 			e.name = event_name
@@ -40,12 +41,8 @@ class ICSCalendar:
 			e.end = end_t
 			e.description = course_name_lookup.get(course, "")
 
-			rrule = Container("RRULE")
-			rrule.append(ContentLine(name="FREQ", value="WEEKLY"))
-			rrule.append(ContentLine(name="BYDAY", value=day_code))
-			rrule.append(ContentLine(name="UNTIL", value=until_date.strftime("%Y%m%dT%H%M%SZ")))
+			e.extra.append(ContentLine(name="RRULE", value=rrule_value))
 
-			e.extra.append(rrule)
 			res.append(e)
 		return res
 
