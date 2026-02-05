@@ -378,31 +378,6 @@
             "Time": "15.00-15.55",
             "FacultyName": "",
             "Merged_SubBtacth": "24CS224CS4"
-        },
-        {
-            "id": 11273,
-            "Slot": "T27",
-            "Pre_post_Lunch": "SlotPre_Lunch",
-            "subjectAlphaCode": "ECE-102",
-            "LHall": "GB-102",
-            "Sub_1": "",
-            "Sub_2": "24CS2",
-            "Sub_3": "",
-            "Sub_4": "24CS4",
-            "Sub_5": "",
-            "Sub_6": "",
-            "Sub_7": "",
-            "Sub_8": "",
-            "Sub_9": "",
-            "Sub_10": "",
-            "SubBatch": "24CS2,24CS4",
-            "Slot_Type": "T",
-            "Batch": "",
-            "Day": "Thursday",
-            "SlotPre_Lunch": "SlotPre_Lunch",
-            "Time": "16.05-17.00",
-            "FacultyName": "Debashis Ghosh,Tharun Kumar Reddy Bolu",
-            "Merged_SubBtacth": "24CS224CS4"
         }
     ],
     "CourseList": [
