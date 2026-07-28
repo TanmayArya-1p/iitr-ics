@@ -1,3 +1,5 @@
+# [onetincan.foo/iitr-ics](onetincan.foo/iitr-ics)
+
 Publish an ICS Calendar for my college classes so that I can subscribe to it using Thunderbird and Proton Calendar.
 
 If you wish to add your classes, then add your API dump to [/calendars/yourname.json](/calendars) and submit a PR.
